@@ -1,17 +1,17 @@
 class SimpleClass {
-    id: number | undefined
+    id: number
+    name: string
+
+    constructor(name: string) {
+        this.id = 1
+        this.name = name
+    }
+
     print() {
-        let id = 10
         console.log('simpleClass.id = ' + this.id)
-        console.log(id)
     }
 }
 
-let simpleClass = new SimpleClass()
-let simpleClass2 = new SimpleClass()
+let simpleClass = new SimpleClass('juan')
 
 simpleClass.print()
-
-simpleClass2.id = 2024
-
-simpleClass2.print()
