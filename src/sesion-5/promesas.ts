@@ -8,6 +8,26 @@ interface Role {
     rol: string;
 }
 
+/**
+ * declaración de una interfaz con dos argumentos genericos
+ */
+interface ObjetoConGenericos<T, S> {
+    id: T;
+    rol: S;
+    nombre: string;
+}
+
+/**
+ * con los genericos nosotros pordemos hacer que ciertas propiedades
+ * sus tipos de valores sean dinamicos
+ * otro ejemplo sería con Promise<Usuario>
+ */
+const test: ObjetoConGenericos<number, string> = {
+    id: 1,
+    rol: 'test',
+    nombre: 'juan'
+}
+
 const usuarios: Usuario[] = [
     {
         id: 1,
