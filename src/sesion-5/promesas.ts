@@ -40,3 +40,17 @@ buscarPersonal(6)
 .then(nombre => console.log(nombre))
 .catch(error => console.log(error))
 
+
+fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Error al obtener los datos');
+    }
+    return response.json();
+})
+.then(data => {
+    console.log(data); // Resuelve la promesa con los datos obtenidos
+})
+.catch(error => {
+    console.log(error); // Rechaza la promesa con el error
+});
